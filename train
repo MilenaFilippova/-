@@ -1,0 +1,31 @@
+#
+//поезд
+#include <iostream> 
+#include <math.h>
+using namespace std;
+int main(void)
+	{int d,d1,d2,h1,m1,h2,m2, mstart,mS,mend,h,m;
+
+		cout <<"Enter the time of departure in space \n"; //Введите время отправления через пробел
+		cin>>h1>> m1;
+		cout <<"Enter the transit time in space \n";  //ВВедите время в пути через пробел
+		cin>>h2>>m2;
+		d1=1; //1 число
+			if ( (h1<24)&&(h1>=0)&&(h2>=0)&&(m1<60)&&(m1>=0)&&(m2<=60)&&(m2>=0)&&(h2*60+m2<=43200)) 
+				//последняя проверка ,на то ,что поезд прибудет в этом же месяце
+			{
+				mstart=(h1*60+m1);
+				mS=(h2*60+m2);
+				mend=mstart+mS;
+				d=(mend/60)/24;
+				d2=d+d1;
+				h=(mend/60-d*24);
+				m=(mend%60);
+				cout<<"Day"<<" "<<d2<<" "<<"Time"<<" "<<h<<":"<<m<<endl ;
+			}    
+			else 
+			{
+				cout<<"Data entered incorrectly \n";
+			}
+	return 0 ;
+}
