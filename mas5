@@ -4,7 +4,7 @@ using namespace std;
 int main(void) 
 {
 	const int l=10,m=10;
-	int s=0;
+	int a=0;
 	int Q[l][m];
 	int min=0,max=10;
 	for (int i=0; i<l; i++)
@@ -12,12 +12,12 @@ int main(void)
 		for (int j=0;j<m; j++)
 		{
 			Q[i][j]= min+rand()%(max-min+1);
-			s=s+Q[i][j];
-			s=s/m;
+			a=a+Q[i][j];
+			a=a/m;
 		}
 		for (int j=0;j<m; j++)
 		{
-		    cout <<Q[i][j]-s <<'\t';
+		    cout <<Q[i][j]-a <<'\t';
 		}
 		
         	cout << endl;
