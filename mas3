@@ -1,0 +1,31 @@
+#include <locale.h>
+#include <ctime>
+#include <iostream>
+using namespace std;
+int main(void) 
+{
+	const int m=5;
+	int i,j;
+	int Z[m][m];
+	int min=0,max=30;
+	for (int i=0; i<m; i++) 
+	{
+		Z[i][j]= min+rand()%(max-min+1);
+		for (int j=0; j<m; j++) 
+	    {
+		    Z[i][j]= min+rand()%(max-min+1);
+	    }
+	}
+
+	for (int i=0; i<m; i++)
+	{
+		for (int j=0;j<m; j++)
+		{
+			Z[i][j]=(Z [i][j])/(Z[j][j]);
+			cout << Z[i][j] <<'\t';
+		}	
+    	cout << endl;
+	}
+
+	return 0;
+}
