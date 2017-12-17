@@ -19,6 +19,6 @@ int main(void)
 		sum+=A[i];
 	}
 	
-			cout << countN << endl<<sum ;
+	cout << countN << endl <<sum ;
 	return 0;
 }
