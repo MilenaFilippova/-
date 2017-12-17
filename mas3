@@ -21,7 +21,7 @@ int main(void)
 	{
 		for (int j=0;j<m; j++)
 		{
-			Z[i][j]=(Z [i][j])/(Z[j][j]);
+			Z[i][j]=Z [i][j]/Z[j][j];
 			cout << Z[i][j] <<'\t';
 		}	
     	cout << endl;
