@@ -20,7 +20,7 @@ int main(void)
 		    cout <<Q[i][j]-s <<'\t';
 		}
 		
-        cout << endl;
+        	cout << endl;
 	}
 
 	return 0;
