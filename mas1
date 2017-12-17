@@ -1,3 +1,4 @@
+
 #include <locale.h>
 #include <iostream>
 using namespace std;
@@ -5,7 +6,7 @@ int main(void)
 {
 	const int N=10;
 	int A[N];
-	int min=-10,max=10,sum;
+	int min=-10,max=10;
 	int countN=0, sum=0;
 	for (int i=0; i<N; i++) 
 	{
@@ -19,6 +20,5 @@ int main(void)
 		sum+=A[i];
 	}
 	
-	cout << countN << endl <<sum ;
+	cout <<" The number of negative : "<<countN << endl <<"The sum of positive elements = "<<sum ;
 	return 0;
-}
