@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+int main()
+{   
+    int const k=3, l=3;
+    int kol=0 ;
+    int D[k][l] ;
+    int E[k*l] ;
+    int max=-10, min=10;
+
+    for(int i=0; i<k; i++)
+    { 
+        for(int j=0; j<l; j++)
+        {
+            D[i][j]=max+rand()%(max-min+1) ;
+            if ( D[i][j]!=0) 
+            {
+                E[kol]= D[i][j];
+                cout<< E[kol]<<'\t' ;
+                kol=kol+1;
+            }
+       }
+    }  
+    for(int i=kol; i<k*l; i++)
+    {
+         E[i]= 0;
+         cout<< E[kol]<<'\t' ;
+    }
+    cout<< endl ;
+    cout <<"Kolichestvo ne nulevih elementov= "<< kol ;
+    return 0;
+}
