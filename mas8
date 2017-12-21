@@ -1,0 +1,30 @@
+//обратный массив
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main(void)
+{   
+    int const k=10;
+	int T[k];
+	int p=0,max=10,min=-10,z=k/2;
+    cout<<"Massiv T[i] : "<<endl;
+	for (int i=0; i<k; i++)
+	{ 
+		T[i]=max+rand()%(max-min+1) ;
+		cout<<T[i]<<'\t';
+
+	}
+    cout<<endl<<"Obratnyi massiv T[i] : "<<endl;
+	for (int i=0; i<z; i++)
+	{ 
+			p=T[i] ;         //переприсваиваем обратные значения
+			T[i]=T[k-1-i];
+			T[k-1-i]=p;
+	}
+	for(int i=0; i<k; i++)
+	{
+		cout<< T[i]<< '\t';
+	}
+	return 0;
+}
