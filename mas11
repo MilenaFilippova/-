@@ -6,22 +6,22 @@ using namespace std;
 
 int main(void)
 {
-	  int const n=15 ;
-	  int A[n];
-	  int min=-20, max=20;
-	  cout <<"Massiv A[n] : ";
-	  for(int i=0; i<n; i++)
-    { 
-		     A[i]=max+rand()%(max-min+1) ;
-		     cout <<A[i]<<'\t';
-	  }
-	  cout<<endl<<"Index local max = " ;      
-	  for(int i=1; i<n-1; i++)
-    { 
-		      if((A[i]> A[i-1])&& (A[i]> A[i+1])) 
-		       {
-			         cout<<i<< '\t';  
-		       }   
-    }
-	  return 0;
+	int const n=15 ;
+	int A[n];
+	int min=-20, max=20;
+	cout <<"Massiv A[n] : ";
+	for(int i=0; i<n; i++)
+    	{ 
+		A[i]=max+rand()%(max-min+1) ;
+		cout <<A[i]<<'\t';
+	}
+	cout<<endl<<"Index local max = " ;      
+	for(int i=1; i<n-1; i++)
+   	{ 
+		if((A[i]> A[i-1])&& (A[i]> A[i+1])) 
+		{
+			cout<<i<< '\t';  
+		}   
+    	}
+	return 0;
 }
