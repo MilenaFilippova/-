@@ -13,7 +13,7 @@ int main()
 
     for(int i=0; i<n; i++)
     { 
-            A[i] = max+rand()%(max-min+1) ;
+            A[i] = min+rand()%(max-min+1) ;
             if ( A[i]>0) 
             { 
                 B[kolp]=A[i];
