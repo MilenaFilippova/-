@@ -9,18 +9,18 @@ int main(void)
 	int const m=10;
 	int	Z[m];
 	int max=20, min=-20,k=0, kol=0;
-    cout<<"Massiv Z[i]: ";
+    	cout<<"Massiv Z[i]: ";
 	for(int i=0; i<m; i++)
-    { 
+    	{ 
 		Z[i]=min+rand()%(max-min+1) ;
 		cout<<Z[i]<<'\t';
 	}
 	for(int j=1; j<m; j++)
 	{ 
-			if ( ((Z[j]>0)&&(Z[j-1]<0)) || ((Z[j]<0) && (Z[j-1]>0)) )    //был переход знака?
-			{
-				kol++;
-			}
+		if ( ((Z[j]>0)&&(Z[j-1]<0)) || ((Z[j]<0) && (Z[j-1]>0)) )    //был переход знака?
+		{
+			kol++;
+		}
 	}
 	cout<<endl<< "Kolichestvo perehodov="<<kol;
 	return 0;
