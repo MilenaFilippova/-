@@ -1,0 +1,30 @@
+//шахматный порядок 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(void)
+{   
+	  int const n=10;
+	  int K[n][n];
+	  int min=-20, max=20;
+
+	  for(int i=0; i<n; i++)
+	  {
+        for(int j=0; j<n; j++)
+		    { 
+			    if ( ((i%2==0)&& (j%2 ==0)) ||  ((i%2!=0)&& (j%2 !=0)) )
+			    {
+				      K[i][j]=0;
+			    }
+			    else
+			    {
+				      K[i][j]=1;
+			    }
+			    cout<< K[i][j]<< '\t';
+		   }
+			 cout<< endl;
+	  }
+	return 0;
+}
