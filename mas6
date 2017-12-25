@@ -15,7 +15,7 @@ int main()
     { 
         for(int j=0; j<l; j++)
         {
-            D[i][j]=max+rand()%(max-min+1) ;
+            D[i][j]=min+rand()%(max-min+1) ;
             if ( D[i][j]!=0) 
             {
                 E[kol]= D[i][j];
