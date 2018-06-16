@@ -1,4 +1,4 @@
-
+//положительные и отрецат элементы
 #include <locale.h>
 #include <iostream>
 using namespace std;
